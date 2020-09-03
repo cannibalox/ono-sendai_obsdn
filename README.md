@@ -3,6 +3,7 @@
 ### description
 a terminal retro-look for [[Obsidian]]
 
+![](https://raw.githubusercontent.com/cannibalox/ono-sendai_obsdn/master/ono-sendai_obsdn_001.png)
 
 #### features:
 
@@ -26,4 +27,12 @@ a terminal retro-look for [[Obsidian]]
 ### warning :
 > user-unfriendly UI, not recommended for obsidian beginners
 
+### installation :
+* first backup your current css theme / css snippets
+* copy the file obsidian.css in the root of your obsidian folder (or browse and install from the community themes inside Obsidian's settings)
 
+![](https://raw.githubusercontent.com/cannibalox/ono-sendai_obsdn/master/ono-sendai_obsdn_002.png)
+
+![](https://raw.githubusercontent.com/cannibalox/ono-sendai_obsdn/master/ono-sendai_obsdn_003.png)
+
+![](https://raw.githubusercontent.com/cannibalox/ono-sendai_obsdn/master/ono-sendai_obsdn_004.png)
