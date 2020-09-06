@@ -1,5 +1,5 @@
-/* Ono-Sendai for Obsidian - v202009060450 by _ph / www.hpx1.com */
-/* consider leaving the credits or putting a thank you if you use this theme as a strater kit */
+/* Ono-Sendai for Obsidian - v202009062339 by _ph / www.hpx1.com */
+/* consider leaving credits or putting a thank you if you use this theme as a strater kit */
 /* free to use, share and modify */
 
 body {
@@ -335,16 +335,20 @@ div.markdown-embed-link > .link {
 .markdown-preview-view h3 {
   font-size: 20px;
   line-height: 22px;
+  padding-left:10px;
 }
 .markdown-preview-view h4 {
   font-size: 18px;
+  padding-left:30px;
 }
 .markdown-preview-view h5 {
   font-size: 15px;
+  padding-left:50px;
 }
 .markdown-preview-view h6 {
   font-size: 15px;
   color: var(--text-muted);
+  padding-left:70px;
 }
 /* ==========hr======*/
 .markdown-preview-view hr {
@@ -352,6 +356,8 @@ div.markdown-embed-link > .link {
   border: none;
   background-color: var(--text-accent);
 }
+
+p {padding-left: 30px;}
 
 /* ===========================*/
 /* ====== GUI tweaks =========*/
@@ -373,8 +379,10 @@ div.markdown-embed-link > .link {
 
 /* ===== icons / ribbons =========*/
 /* smaller icons*/
-
-svg {
+.workspace-ribbon-collapse-btn svg,
+.side-dock-actions svg,
+.side-dock-settings svg,
+.view-action svg {
   width: 12px;
   height: 12px;
 }
@@ -630,7 +638,6 @@ input[type="number"] {
   content: "TAGS";
   font-size: 12px;
   font-weight: 900;
-  vertical-align: top;
   display: block;
   top: 0px;
   left: 5px;
@@ -669,7 +676,6 @@ input[type="number"] {
   content: "OUTLINE";
   font-size: 12px;
   font-weight: 900;
-  vertical-align: top;
   display: block;
   top: 0px;
   left: 5px;
@@ -717,7 +723,6 @@ input[type="number"] {
   content: "BACKLINKS";
   font-size: 12px;
   font-weight: 900;
-  vertical-align: top;
   display: block;
   top: 0px;
   left: 5px;
@@ -930,10 +935,10 @@ input[type="number"] {
 .graph-view.color-line-highlight {
   color: rgb(var(--interactive-accent-rgb));
 }
-.view-content > iframe {
-  background-color: var(--graph-bg);
-}
 
+.view-content > iframe {
+  background-color: #000000;
+}
 
 /*===== local graph =====*/
 
@@ -1310,7 +1315,7 @@ div[aria-label="Starred"] .workspace-tab-header-inner:after {
 }
 .view-content {
   width: 100%;
-  height: calc(100% - 31px);
+  height: calc(100% - 24px);
 }
 /* .workspace-leaf.mod-active .view-header-title:before{
   content: "S>";
@@ -1607,7 +1612,6 @@ div[aria-label="Starred"] .workspace-tab-header-inner:after {
 }
 
 div.mermaidTooltip {
-  position: absolute !important;
   text-align: center !important;
   max-width: 200px !important;
   padding: 2px !important;
