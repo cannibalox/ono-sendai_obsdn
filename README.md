@@ -19,10 +19,10 @@ a terminal retro-look for [[Obsidian]]
 
 
 #### protips :
-* full dark mode : enable dark mode & change line 17 to : `--background-primary: #000000` to enable the full dark mode
-* disable file explorer columns view by commenting out lines[1359-1370] in case of bugs (experimental feat.)
+* full dark mode : enable dark mode & change line 19 to : `--background-primary: #000000` to enable the full dark mode
+* disable file explorer columns view by commenting out lines[1505-1509] in case of bugs (experimental feat.)
 * theme has been designed for **dark** mode, however a light mode is also available.
-* for the file explorer : you can replace the `backslash` with a `slash` at line 535 : replace `content: "\\"` with `content: "\/"` 	
+* for the file explorer : you can replace the `backslash` with a `slash` around line 560 : replace `content: "\\"` with `content: "\/"` 	
 
 ### warning :
 > user-unfriendly UI, not recommended for obsidian beginners
