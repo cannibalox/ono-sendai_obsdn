@@ -3,6 +3,7 @@
 ### description
 a terminal retro-look for [[Obsidian]]
 
+![](https://raw.githubusercontent.com/cannibalox/ono-sendai_obsdn/master/ono-sendai_obsdn_00.png)
 ![](https://raw.githubusercontent.com/cannibalox/ono-sendai_obsdn/master/ono-sendai_obsdn_001.png)
 
 #### features:
@@ -32,6 +33,8 @@ a terminal retro-look for [[Obsidian]]
 * copy the file obsidian.css in the root of your obsidian folder (or browse and install from the community themes inside Obsidian's settings)
 * the font used in the screenshots is Cairo : https://fonts.google.com/specimen/Cairo?query=Cairo&selection.family=Armata|Cairo&sidebar.open=true
 (font should be installed locally before running obsdidian)
+
+![](https://raw.githubusercontent.com/cannibalox/ono-sendai_obsdn/master/ono-sendai_obsdn_00a.png)
 
 ![](https://raw.githubusercontent.com/cannibalox/ono-sendai_obsdn/master/ono-sendai_obsdn_002.png)
 
