@@ -1,4 +1,4 @@
-/* Ono-Sendai for Obsidian - v202009080710 by _ph / www.hpx1.com */
+/* Ono-Sendai for Obsidian - v202009110030 by _ph / www.hpx1.com */
 /* consider leaving credits or putting a thank you if you use this theme as a strater kit */
 /* free to use, share and modify */
 
@@ -139,7 +139,7 @@ body {
   border-radius: 4px;
   padding: 2px 4px;
   font-size: 0.85em;
-  font-weight: 400;
+  font-weight: 500;
 }
 /* ====== Tag Pills ======== */
 
@@ -1512,95 +1512,106 @@ div[aria-label="Starred"] .workspace-tab-header-inner:after {
   color: var(--text-accent2);
 }
 /*=============== top titlebar ================*/
-.top-titlebar {
+.titlebar {
   background-color:var(--background-secondary-alt);
 }
-.top-titlebar-inner {
+.titlebar-inner {
   -webkit-app-region: drag;
   display: flex;
   flex-grow: 1;
   color: var(--text-accent2);
 }
-.top-titlebar-left {
+.titlebar-left {
   width: 30px;
 }
-.top-titlebar-button.mod-back, .top-titlebar-button.mod-forward {
-  line-height: 20px;
+.titlebar-button.mod-back, .titlebar-button.mod-forward {
+  line-height: 28px;
 }
-.top-titlebar-button {
+.titlebar-button {
   -webkit-app-region: no-drag;
   padding: 0 8px;
   cursor: pointer;
-  line-height: 22px;
-  opacity: 0.5;
+  opacity: 0.7;
 }
-.top-titlebar-button:hover {
+.titlebar-button:hover {
   opacity: 1;
 }
-.top-titlebar-button.mod-back svg {
+.titlebar-button.mod-back svg {
   display:none;
 }
-.top-titlebar-button.mod-back:before {
+.titlebar-button.mod-back:before {
   content:"<<prev";
   font-size: 11px; 
+  top:-2px;
+  position:relative;
 }
-.top-titlebar-button.mod-forward svg {
+.titlebar-button.mod-forward svg {
   display:none;
 }
-.top-titlebar-button.mod-forward:before {
+.titlebar-button.mod-forward:before {
   content:"next>>";
   font-size: 11px; 
+  top:-2px;
+  position:relative;
 }
-.top-titlebar-text {
+.titlebar-text {
   flex-grow: 1;
-  margin-right: 20px;
-  font-size: 0px;
+  margin-right: 120px;
+  font-size: 10px;
   text-align: right;
   letter-spacing: 0.05em;
   line-height: 20px;
   opacity: 1;
   color: var(--text-accent);
+  position: relative;
 }
-.top-titlebar-text:after {
+.titlebar-text:after {
   content: "\\ ono-sendai";
-  font-size: 11px;
+  font-size: 10px;
   text-align: right;
-  left: 5px;
-  right:20px;
+  right:-1px;
   color: var(--text-accent2);
   position: relative;
 }
-.top-titlebar-text:before{
-  content: "\\ \\ obsidian 0.8.13";
+.titlebar-text:before{
+  content: "\\ \\";
   font-size: 11px;
   text-align: right;
-  left: 2px;
-  right:20px;
+  right:1px;
   color: var(--text-accent);
   position: relative;
 }
-div[aria-label="Minimize"] {
+.titlebar-button-container {
+  position: absolute;
+  height: 26px;
+  top: 0px;
+}
+div[aria-label="Minimize"] svg rect {
   opacity: 0.7;
+  stroke: var(--text-accent2);
+  fill: var(--text-accent2);
   filter: saturate(100);
 }
-div[aria-label="Restore down"],
-div[aria-label="Maximize"] {
-  opacity: 0.60;
-  filter: saturate(3);
+div[aria-label="Restore down"] svg rect,
+div[aria-label="Maximize"] svg rect {
+  opacity: 1;
+  stroke: var(--text-accent2);
+  fill: none;
 }
 div[aria-label="Close window"] {
   color: red;
-  opacity: 1;
+  opacity: 0.7;
   filter: saturate(100);
+  stroke: red;
 }
 /*=============== transluscency fx ================*/
 body.is-translucent {
   background-color: transparent;
 }
 .theme-dark {--opacity-translucency: 0.7;}
-.theme-light { --opacity-translucency: 0.6; }
-.is-translucent .top-titlebar { opacity: 1; }
-.is-translucent .workspace { background-color: transparent;filter: contrast(1.5);filter: brightness(1.7); }
+.theme-light { --opacity-translucency: 0.55; }
+.is-translucent .titlebar { opacity: 1; }
+.is-translucent .workspace { background-color: transparent;filter: contrast(1.4);filter: brightness(1.4); }
 .is-translucent .workspace-split.mod-root { opacity: var(--opacity-translucency); }
 .is-translucent .workspace-leaf-resize-handle { opacity: 1; background-color: var(--background-secondary-alt);}
 .is-translucent .workspace-leaf-resize-handle:hover { background-color: rgba(var(--interactive-accent-rgb), 0.8); }
