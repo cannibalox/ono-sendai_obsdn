@@ -1,10 +1,10 @@
-/* Ono-Sendai for Obsidian - v202009110030 by _ph / www.hpx1.com */
-/* consider leaving credits or putting a thank you if you use this theme as a strater kit */
-/* free to use, share and modify */
+/* Ono-Sendai for Obsidian - v202009121240 by _ph / www.hpx1.com */
+/* consider leaving credits or putting a thank you if you use this theme as a starter kit */
+/* free to use, share and modify -*/
 
 body {
   font-size: 13px;
-  font-family: Cairo, Inter, sans-serif;
+  font-family: Cairo, Roboto, Inter, sans-serif;
   --font-monospace: Fira Code, Source Code Pro, monospace;
   line-height: 1.65em;
 }
@@ -19,7 +19,7 @@ body {
   --background-primary: #17191a; /* standard: #17191a  pro mode: #000000 */
   --background-modifier-border: rgb(0, 0, 0);
   --background-modifier-cover: rgba(6, 39, 3, 0.842);
-  --background-primary-alt: rgba(0, 0, 0, 0.72);
+  --background-primary-alt: rgb(5, 5, 5);
   --background-secondary: #0f5172; /*#0f5172;*/
   --background-secondary-alt: rgb(0, 0, 0);
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.85);
@@ -141,6 +141,14 @@ body {
   font-size: 0.85em;
   font-weight: 500;
 }
+
+.markdown-preview-view pre {
+  padding: 6px 10px;
+  background-color: var(--background-primary-alt);
+  border-radius: 4px;
+  white-space: pre-wrap;
+}
+
 /* ====== Tag Pills ======== */
 
 .tag {
@@ -316,21 +324,23 @@ div.markdown-embed-link > .link {
   white-space: nowrap;
 }
 
-/* ==========headings=======*/
+/* ==============headings=================*/
 .markdown-preview-view h1 {
-  font-size: 24px;
+  font-size: 30px;
   line-height: 40px;
   padding-bottom: 10px;
   border-bottom: 1px solid var(--text-accent);
-  color: var(--text-accent);
+  color: var(--text-normal);
+  font-family: Mod, Cairo, Roboto, 'Segoe UI', Consolas, Inter, sans-serif ;
 }
 .markdown-preview-view h2 {
-  font-size: 22px;
+  font-size: 26px;
   line-height: 36px;
   padding-top: 14px;
   padding-bottom: 6px;
   border-bottom: 1px solid var(--text-faint);
   color: var(--text-accent2);
+  font-family: Hector, kayak sans, Cairo, Roboto, 'Segoe UI', Consolas, Inter, sans-serif  ;
 }
 .markdown-preview-view h3 {
   font-size: 20px;
@@ -350,7 +360,7 @@ div.markdown-embed-link > .link {
   color: var(--text-muted);
   padding-left:70px;
 }
-/* ==========hr======*/
+/* ==============hr=============*/
 .markdown-preview-view hr {
   height: 1px;
   border: none;
@@ -442,7 +452,7 @@ p {padding-left: 10px;}
 
 /* ==== align top tab header with header title ==== */
 
-/* =====  left sidebar =========*/
+/* ==========  left sidebar ==============*/
 .workspace-ribbon.mod-left {
   left: 0px;
   top: 0px;
@@ -625,76 +635,6 @@ input[type="number"] {
 .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type.mod-active .view-header-title-container:after {
   background: none;
 }
-/* ===== tag pane ===================*/
-.workspace-leaf-content[data-type='tag'] {
-  padding: 10px 10px;
-  overflow: auto;
-} 
-
-.workspace-tab-header[aria-label="Tag pane"] > .workspace-tab-header-inner > .workspace-tab-header-inner-icon svg {
-  display: none;
-}
-.workspace-tab-header[aria-label="Tag pane"] > .workspace-tab-header-inner > .workspace-tab-header-inner-icon::before {
-  content: "TAGS";
-  font-size: 12px;
-  font-weight: 900;
-  display: block;
-  top: 0px;
-  left: 5px;
-  position: relative;
-  padding: 0 5px;
-}
-.workspace-tab-header[aria-label="Tag pane"] > .workspace-tab-header-inner > .workspace-tab-header-inner-icon:hover {
- color :red;
-}
-.tag-pane-tag {
-  font-size: 11px;
-  line-height: 20px;
-  color: var(--tagspanetag)
-}
-
-.tag-pane-tag-count {
-  top: 2px;
-  right: 10px;
-  font-size: 11px;
-  background-color: var(--background-secondary-alt);
-  line-height: 12px;
-  border-radius: 3px;
-  padding: 2px 4px;
-  color:var(--text-accent2)
-}
-
-.pane-clickable-item {
-  padding: 0px 15px;
-}
-/*==== outline pane ====*/
-.workspace-tab-header[aria-label^="Outline"] > .workspace-tab-header-inner > .workspace-tab-header-inner-icon svg {
-  display: none;
-  color:red;
-}
-.workspace-tab-header[aria-label^="Outline"] > .workspace-tab-header-inner > .workspace-tab-header-inner-icon::before {
-  content: "OUTLINE";
-  font-size: 12px;
-  font-weight: 900;
-  display: block;
-  top: 0px;
-  left: 5px;
-  position: relative;
-  padding: 0 8px;
-}
-.workspace-tab-header[aria-label^="Outline"] > .workspace-tab-header-inner > .workspace-tab-header-inner-icon:hover {
- color :red;
-}
-
-.outline .pane-clickable-item {
-  cursor: pointer;
-  user-select: none;
-  color: var(--text-accent2);
-  padding: 0px 15px;
-  border-radius: 3px;
-  font-size: 12px;
-  position: relative;
-}
 
 /*==== separators =====*/
 .workspace-split.mod-root .workspace-split.mod-vertical .workspace-leaf-content {
@@ -720,36 +660,6 @@ input[type="number"] {
   padding: 20px 30px 30px 45px;
 }
 
-/*===== backlink pane =======*/
-.workspace-tab-header[aria-label^="Backlinks"] > .workspace-tab-header-inner > .workspace-tab-header-inner-icon svg {
-  display: none;
-  color:red;
-}
-.workspace-tab-header[aria-label^="Backlinks"] > .workspace-tab-header-inner > .workspace-tab-header-inner-icon::before {
-  content: "BACKLINKS";
-  font-size: 12px;
-  font-weight: 900;
-  display: block;
-  top: 0px;
-  left: 5px;
-  position: relative;
-  padding: 0 10px;
-}
-.workspace-tab-header[aria-label^="Backlinks"] > .workspace-tab-header-inner > .workspace-tab-header-inner-icon:hover {
- color :red;
-}
-
-.workspace-leaf-content[data-type='backlink'] .nav-action-button {
-  padding: 2px 8px 0px 8px;
-  margin: 0px 20px 3px 3px;
-  border-radius: 4px;
-}
-.workspace-leaf-content[data-type='backlink'] .nav-action-button.is-active {
-  background-color: var(--text-highlight-bg);
-  color: var(--text-accent2);
-  padding: 2px 8px 0px 8px;
-  margin: 0px 20px 3px 3px;
-}
 .side-dock-collapsible-section-header {
   font-size: 12px;
   padding: 4px 14px 0 22px;
@@ -1226,48 +1136,175 @@ table {
   height: 100%;
   display: flex;
 }
+
+div[aria-label="文件管理器"],
 div[aria-label="File explorer"],
+div[aria-label="搜索"],
 div[aria-label="Search"],
+div[aria-label^="星标"],
 div[aria-label^="Starred"] {
   padding: 0px 5px 0px 20px;
   background-color: var(--background-secondary-alt);
 }
-/*===replace icons in tab header====*/
+/*========  replace icons in tab header with text =========*/
+div[aria-label="文件管理器"] .workspace-tab-header-inner-icon,
 div[aria-label="File explorer"] .workspace-tab-header-inner-icon {
   display: none;
 }
+div[aria-label="文件管理器"] .workspace-tab-header-inner:after,
 div[aria-label="File explorer"] .workspace-tab-header-inner:after {
   content: "FILES";
   font-size:12px;
   font-weight: 700;
   margin-left:-8px;
 }
+
+div[aria-label="搜索"] .workspace-tab-header-inner-icon,
 div[aria-label="Search"] .workspace-tab-header-inner-icon {
   display: none;
 }
+div[aria-label="搜索"] .workspace-tab-header-inner:after,
 div[aria-label="Search"] .workspace-tab-header-inner:after {
   content: "SEARCH";
   font-size:12px;
   font-weight: 700;
   margin-left:-8px;
 }
+div[aria-label="星标"] .workspace-tab-header-inner-icon, 
 div[aria-label="Starred"] .workspace-tab-header-inner-icon {
   display: none;
 }
+div[aria-label="星标"] .workspace-tab-header-inner:after,
 div[aria-label="Starred"] .workspace-tab-header-inner:after {
   content: "STAR";
   font-size:12px;
   font-weight: 700;
   margin-left:-8px;
 }
-.workspace-tab-container-before.is-before-active, .workspace-tab-container-after.is-after-active, .workspace-tab-header.is-before-active, .workspace-tab-header.is-after-active {
+
+.workspace-tab-container-before.is-before-active,
+.workspace-tab-container-after.is-after-active,
+.workspace-tab-header.is-before-active,
+.workspace-tab-header.is-after-active {
   background-color: var(--background-secondary-alt);
 }
+
 .workspace-tabs {
   background-color: var(--background-secondary-alt);
   overflow: hidden;
   padding: 0px 4px 28px 0;
   position: relative;
+}
+
+/* ========= tag pane ===================*/
+.workspace-leaf-content[data-type='tag'] {
+  padding: 10px 10px;
+  overflow: auto;
+} 
+.workspace-tab-header[aria-label="标签面板"] > .workspace-tab-header-inner > .workspace-tab-header-inner-icon svg,
+.workspace-tab-header[aria-label="Tag pane"] > .workspace-tab-header-inner > .workspace-tab-header-inner-icon svg {
+  display: none;
+}
+
+.workspace-tab-header[aria-label="标签面板"] > .workspace-tab-header-inner > .workspace-tab-header-inner-icon::before,
+.workspace-tab-header[aria-label="Tag pane"] > .workspace-tab-header-inner > .workspace-tab-header-inner-icon::before {
+  content: "TAGS";
+  font-size: 12px;
+  font-weight: 900;
+  display: block;
+  top: 0px;
+  left: 5px;
+  position: relative;
+  padding: 0 5px;
+}
+.workspace-tab-header[aria-label="标签面板"] > .workspace-tab-header-inner > .workspace-tab-header-inner-icon:hover,
+.workspace-tab-header[aria-label="Tag pane"] > .workspace-tab-header-inner > .workspace-tab-header-inner-icon:hover {
+ color :red;
+}
+.tag-pane-tag {
+  font-size: 11px;
+  line-height: 20px;
+  color: var(--tagspanetag)
+}
+
+.tag-pane-tag-count {
+  top: 2px;
+  right: 10px;
+  font-size: 11px;
+  background-color: var(--background-secondary-alt);
+  line-height: 12px;
+  border-radius: 3px;
+  padding: 2px 4px;
+  color:var(--text-accent2)
+}
+
+.pane-clickable-item {
+  padding: 0px 15px;
+}
+/*==== outline pane ====*/
+.workspace-tab-header[aria-label*="大纲"] > .workspace-tab-header-inner > .workspace-tab-header-inner-icon svg,
+.workspace-tab-header[aria-label^="Outline"] > .workspace-tab-header-inner > .workspace-tab-header-inner-icon svg {
+  display: none;
+  color:red;
+}
+.workspace-tab-header[aria-label*="大纲"] > .workspace-tab-header-inner > .workspace-tab-header-inner-icon::before,
+.workspace-tab-header[aria-label^="Outline"] > .workspace-tab-header-inner > .workspace-tab-header-inner-icon::before {
+  content: "OUTLINE";
+  font-size: 12px;
+  font-weight: 900;
+  display: block;
+  top: 0px;
+  left: 5px;
+  position: relative;
+  padding: 0 8px;
+}
+.workspace-tab-header[aria-label*="大纲"] > .workspace-tab-header-inner > .workspace-tab-header-inner-icon:hover,
+.workspace-tab-header[aria-label^="Outline"] > .workspace-tab-header-inner > .workspace-tab-header-inner-icon:hover {
+ color :red;
+}
+
+.outline .pane-clickable-item {
+  cursor: pointer;
+  user-select: none;
+  color: var(--text-accent2);
+  padding: 0px 15px;
+  border-radius: 3px;
+  font-size: 12px;
+  position: relative;
+}
+
+/*===== backlinks pane =======*/
+.workspace-tab-header[aria-label*="反向链接"] > .workspace-tab-header-inner > .workspace-tab-header-inner-icon svg,
+.workspace-tab-header[aria-label^="Backlinks"] > .workspace-tab-header-inner > .workspace-tab-header-inner-icon svg {
+  display: none;
+  color:red;
+}
+.workspace-tab-header[aria-label*="反向链接"] > .workspace-tab-header-inner > .workspace-tab-header-inner-icon::before,
+.workspace-tab-header[aria-label^="Backlinks"] > .workspace-tab-header-inner > .workspace-tab-header-inner-icon::before {
+  content: "BACKLINKS";
+  font-size: 12px;
+  font-weight: 900;
+  display: block;
+  top: 0px;
+  left: 5px;
+  position: relative;
+  padding: 0 10px;
+}
+.workspace-tab-header[aria-label^="反向链接"] > .workspace-tab-header-inner > .workspace-tab-header-inner-icon:hover,
+.workspace-tab-header[aria-label^="Backlinks"] > .workspace-tab-header-inner > .workspace-tab-header-inner-icon:hover {
+ color :red;
+}
+
+.workspace-leaf-content[data-type='backlink'] .nav-action-button {
+  padding: 2px 8px 0px 8px;
+  margin: 0px 20px 3px 3px;
+  border-radius: 4px;
+}
+.workspace-leaf-content[data-type='backlink'] .nav-action-button.is-active {
+  background-color: var(--text-highlight-bg);
+  color: var(--text-accent2);
+  padding: 2px 8px 0px 8px;
+  margin: 0px 20px 3px 3px;
 }
 
 /*====== view header =====*/
@@ -1621,8 +1658,155 @@ body.is-translucent {
    opacity: 1; 
    border-top: 0px solid var(--background-secondary-alt); 
    margin: 0px 0px; }
+
+
 /*=============== add mods below ================*/
 /*=============== add mods below ================*/
+
+/*=============== DIRTY WYSIWYM HEADERS by _ph =====================*/
+/*=============== replace H1-H6 markup in edit mode ================*/
+.CodeMirror-sizer{
+  margin-left: 48px !important;
+}
+
+/*-- reduce left padding --*/
+.CodeMirror {
+  height: 100%;
+  direction: ltr;
+  padding: 0 10px;
+}
+/*-- header color --*/
+.cm-header.cm-header-1{
+  color: var(--text-accent);
+  left:0px;
+  position: relative;
+}
+.cm-header.cm-header-2{
+  color: var(--text-accent2);
+  left:0px;
+  position: relative;
+}
+
+/*-- hide # markup--*/
+.cm-formatting.cm-formatting-header.cm-formatting-header-1.cm-header.cm-header-1,
+.cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-header-2,
+.cm-formatting.cm-formatting-header.cm-formatting-header-3.cm-header.cm-header-3,
+.cm-formatting.cm-formatting-header.cm-formatting-header-4.cm-header.cm-header-4,
+.cm-formatting.cm-formatting-header.cm-formatting-header-5.cm-header.cm-header-5,
+.cm-formatting.cm-formatting-header.cm-formatting-header-6.cm-header.cm-header-6
+{font-size:0px;}
+
+/*-- display H1-h6 in gutter--*/
+.cm-formatting.cm-formatting-header.cm-formatting-header-1.cm-header.cm-header-1:before{
+  content:"H1";
+  font-size:18px;
+  color: var(--text-accent2);
+  left:-49px;
+  top:-17px;
+  position:absolute;
+}
+.cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-header-2:before{
+  content:"H2";
+  font-size:13px;
+  color: var(--text-accent2);
+  left:-43px;
+  top:-10px;
+  position:absolute;
+}
+.cm-formatting.cm-formatting-header.cm-formatting-header-3.cm-header.cm-header-3:before{
+  content:"H3";
+  font-size:11px;
+  color: var(--text-accent2);
+  left:-36px;
+  top: 16px;
+  position:absolute;
+}
+.cm-formatting.cm-formatting-header.cm-formatting-header-4.cm-header.cm-header-4:before{
+  content:"H4";
+  font-size:10px;
+  color: var(--text-accent2);
+  left:-36px;
+  top: 14px;
+  position:absolute;
+}
+.cm-formatting.cm-formatting-header.cm-formatting-header-5.cm-header.cm-header-5:before{
+  content:"H5";
+  font-size:10px;
+  color: var(--text-accent2);
+  left:-36px;
+  top: 13px;
+  position:absolute;
+}
+.cm-formatting.cm-formatting-header.cm-formatting-header-6.cm-header.cm-header-6:before{
+  content:"H6";
+  font-size:10px;
+  color: var(--text-accent2);
+  left:-36px;
+  top: 13px;
+  position:absolute;
+}
+
+/*-- is active line, hide H[1-6] in gutter --*/
+.CodeMirror-activeline span.cm-formatting.cm-formatting-header.cm-formatting-header-1.cm-header.cm-header-1:before,
+.CodeMirror-activeline span.cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-header-2:before,
+.CodeMirror-activeline span.cm-formatting.cm-formatting-header.cm-formatting-header-3.cm-header.cm-header-3:before,
+.CodeMirror-activeline span.cm-formatting.cm-formatting-header.cm-formatting-header-4.cm-header.cm-header-4:before,
+.CodeMirror-activeline span.cm-formatting.cm-formatting-header.cm-formatting-header-5.cm-header.cm-header-5:before,
+.CodeMirror-activeline span.cm-formatting.cm-formatting-header.cm-formatting-header-6.cm-header.cm-header-6:before
+{font-size:0px;}
+/*-- is active line, display # markup --*/
+.CodeMirror-activeline > pre > span .cm-formatting.cm-formatting-header.cm-formatting-header-1.cm-header.cm-header-1{
+  font-size:32px;
+  display:inline;
+}
+.CodeMirror-activeline > pre > span .cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-header-2{
+  font-size:24px;
+  display:inline;
+}
+.CodeMirror-activeline > pre > span .cm-formatting.cm-formatting-header.cm-formatting-header-3.cm-header.cm-header-3{
+  font-size:19px;
+  display:inline;
+}
+.CodeMirror-activeline > pre > span .cm-formatting.cm-formatting-header.cm-formatting-header-4.cm-header.cm-header-4,
+.CodeMirror-activeline > pre > span .cm-formatting.cm-formatting-header.cm-formatting-header-5.cm-header.cm-header-5,
+.CodeMirror-activeline > pre > span .cm-formatting.cm-formatting-header.cm-formatting-header-6.cm-header.cm-header-6{
+  font-size:13px;
+  display:inline;
+}
+
+/*=============== FOCUS MODE by death_au + transparency mod ================*/
+
+.cm-s-obsidian div:not(.CodeMirror-activeline) > pre.CodeMirror-line,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-link,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hmd-internal-link,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-url,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hmd-escape-backslash,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-inline-code,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > pre.CodeMirror-line.HyperMD-codeblock,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hashtag,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-builtin,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hr,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-footref,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line pre.HyperMD-footnote span.cm-hmd-footnote,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-highlight,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-highlight,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-list,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-quote,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-math,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.hmd-fold-math-placeholder {
+  opacity:0.7;
+  filter: saturate(0.7);
+}
+
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-highlight,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-highlight {
+  background-color: transparent;
+}
+.CodeMirror-activeline {
+  opacity:1;
+} */
+
 /*=============== add mods below ================*/
 /*=============== add mods below ================*/
 
