@@ -1,4 +1,4 @@
-/* Ono-Sendai for Obsidian - v202009121240 by _ph / www.hpx1.com */
+/* Ono-Sendai for Obsidian - v202009140900 by _ph / www.hpx1.com */
 /* consider leaving credits or putting a thank you if you use this theme as a starter kit */
 /* free to use, share and modify -*/
 
@@ -18,7 +18,7 @@ body {
 .theme-dark {
   --background-primary: #17191a; /* standard: #17191a  pro mode: #000000 */
   --background-modifier-border: rgb(0, 0, 0);
-  --background-modifier-cover: rgba(6, 39, 3, 0.842);
+  --background-modifier-cover: rgba(5, 20, 1, 0.842);
   --background-primary-alt: rgb(5, 5, 5);
   --background-secondary: #0f5172; /*#0f5172;*/
   --background-secondary-alt: rgb(0, 0, 0);
@@ -416,7 +416,7 @@ p {padding-left: 10px;}
 }
 .workspace-ribbon-collapse-btn {
   margin-top: 0px;
-  padding: 0px 6px 64px 6px;
+  padding: 0px 4px 64px 8px;
   cursor: pointer;
   color: var(--text-faint);
   transform: none;
@@ -456,7 +456,7 @@ p {padding-left: 10px;}
 .workspace-ribbon.mod-left {
   left: 0px;
   top: 0px;
-  border-right: 1px solid var(--border-muted);
+  border-right: 1px solid var(--background-primary);
 }
 .side-dock-ribbon-tab:hover, .side-dock-ribbon-action:hover {
   color: var(--text-error);
@@ -862,6 +862,8 @@ input[type='range'] {
   height: 2px;
   background-color: var(--text-accent);
   border-radius: 0px;
+  top:7px;
+  position:absolute;
 }
 input[type='range']::-webkit-slider-thumb {
   width: 4px;
@@ -871,32 +873,52 @@ input[type='range']::-webkit-slider-thumb {
   background: var(--text-accent2);     
   cursor: pointer;
 }
-
+.local-graph-jumps-slider-container {
+  position: absolute;
+  left: 14px;
+  top: 10px;
+  width:120px;
+  height: 20px;
+  padding: 0px 0px 0px 8px;
+  border-radius: 0px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
 
 /*==== codemirror line numbers gutter edit mode ====*/
+.cm-s-obsidian .CodeMirror-gutters {
+  position: absolute;
+  min-height: 100%;
+  z-index: 3;
+  padding-right: 0px;
+}
 
 .cm-s-obsidian .CodeMirror-linenumber {
   color: var(--text-accent);
   opacity: 0.4;
-  font-size: 14px;
-  font-family: Firq Codem Consolas, monospace;
-}
-
-.CodeMirror-gutter-elt {
-  position: absolute;
-  cursor: default;
-  z-index: 4;
-}
-
-.CodeMirror-linenumber {
-  padding: 0 3px 0 0px;
+  font-size: 11px;
+  font-family: Cairo, Fira Code, Consolas, monospace;
+  padding: 0 0px 0 0px;
   min-width: 20px;
   text-align: right;
   white-space: nowrap;
 }
+
+.CodeMirror-foldgutter-open, .CodeMirror-foldgutter-folded {
+  cursor: pointer;
+  font-size: 20px;
+  position:absolute;
+  left: 2px !important;
+  top:-4px !important;
+  width: 18px;
+}
+
 /* ==== fold icons ==== */
 .CodeMirror-guttermarker-subtle {
   color: var(--text-accent2);
+}
+/*-- wider folding zone--*/
+.CodeMirror-foldgutter {
+  width: 2.5em;
 }
 /* === show margins in editor mode === */
 .CodeMirror-lines {
@@ -1641,6 +1663,9 @@ div[aria-label="Close window"] {
   filter: saturate(100);
   stroke: red;
 }
+.titlebar-button-container.mod-right {
+  right: 3px;
+}
 /*=============== transluscency fx ================*/
 body.is-translucent {
   background-color: transparent;
@@ -1701,7 +1726,7 @@ body.is-translucent {
   content:"H1";
   font-size:18px;
   color: var(--text-accent2);
-  left:-49px;
+  left:-54px;
   top:-17px;
   position:absolute;
 }
@@ -1709,7 +1734,7 @@ body.is-translucent {
   content:"H2";
   font-size:13px;
   color: var(--text-accent2);
-  left:-43px;
+  left:-48px;
   top:-10px;
   position:absolute;
 }
@@ -1717,7 +1742,7 @@ body.is-translucent {
   content:"H3";
   font-size:11px;
   color: var(--text-accent2);
-  left:-36px;
+  left:-41px;
   top: 16px;
   position:absolute;
 }
@@ -1725,24 +1750,24 @@ body.is-translucent {
   content:"H4";
   font-size:10px;
   color: var(--text-accent2);
-  left:-36px;
-  top: 14px;
+  left:-41px;
+  top: 10px;
   position:absolute;
 }
 .cm-formatting.cm-formatting-header.cm-formatting-header-5.cm-header.cm-header-5:before{
   content:"H5";
   font-size:10px;
   color: var(--text-accent2);
-  left:-36px;
-  top: 13px;
+  left:-41px;
+  top: 10px;
   position:absolute;
 }
 .cm-formatting.cm-formatting-header.cm-formatting-header-6.cm-header.cm-header-6:before{
   content:"H6";
   font-size:10px;
   color: var(--text-accent2);
-  left:-36px;
-  top: 13px;
+  left:-41px;
+  top: 10px;
   position:absolute;
 }
 
