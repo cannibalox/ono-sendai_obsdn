@@ -1825,6 +1825,7 @@ body.is-translucent {
 }
 .theme-dark {--opacity-translucency: 0.7;}
 .theme-light { --opacity-translucency: 0.5; }
+.is-frameless.mod-windows.is-translucent{border-top: none;}
 .is-translucent.theme-light .titlebar { opacity: 0.8; }
 .is-translucent.theme-dark .titlebar { opacity: 1; }
 .is-translucent img { background-color: transparent; filter: contrast(1.12) brightness(0.74); opacity:1;}
