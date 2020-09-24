@@ -1,4 +1,4 @@
-/* Ono-Sendai for Obsidian - v202009220840 v0.9.00 by _ph / www.hpx1.com */
+/* Ono-Sendai for Obsidian - v202009250100 v0.9.00 by _ph / www.hpx1.com */
 /* consider leaving credits or putting a thank you if you use this theme as a starter kit */
 /* free to use, share and modify -*/
 
@@ -1543,18 +1543,7 @@ div[aria-label="Starred"] .workspace-tab-header-inner:after {
   width: 100%;
   height: calc(100% - 22px);
 }
-/* .workspace-leaf.mod-active .view-header-title:before{
-  content: "S>";
-  position: relative;
-  color:red;
-  background-color: transparent;
-  font-size:10px;
-  top: 0px;
-  right: 0px;
-  width: 0;
-  height: 0;
-  padding: 0 5px 0 0px;
-} */
+
 .workspace-leaf.mod-active .view-header-icon {
   padding: 0px 10px;
   color: var(--text-accent2);
@@ -1838,7 +1827,8 @@ body.is-translucent {
 .theme-light { --opacity-translucency: 0.5; }
 .is-translucent.theme-light .titlebar { opacity: 0.8; }
 .is-translucent.theme-dark .titlebar { opacity: 1; }
-.is-translucent .workspace { background-color: transparent; filter: contrast(1.4);filter: brightness(1.4); }
+.is-translucent img { background-color: transparent; filter: contrast(1.12) brightness(0.74); opacity:1;}
+.is-translucent .workspace { background-color: transparent; filter: contrast(1.2) brightness(1.34);}
 .is-translucent .workspace-split.mod-root { opacity: var(--opacity-translucency); }
 .is-translucent.theme-light .workspace-leaf-resize-handle { opacity: 0.1; background-color: var(--background-secondary-alt);}
 .is-translucent.theme-dark .workspace-leaf-resize-handle { opacity: 1; background-color: var(--background-secondary-alt);}
