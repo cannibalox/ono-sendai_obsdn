@@ -1492,6 +1492,11 @@ div[aria-label="Starred"] .workspace-tab-header-inner:after {
 }
 
 /*====== view header =====*/
+
+.workspace-leaf.mod-active .view-header-title::selection {
+  background-color: var(--text-highlight-bg);
+  color: var(--interactive-accent);
+}
 .view-header-icon {
   padding: 0px 10px;
   color: var(--text-muted);
