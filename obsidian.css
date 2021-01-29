@@ -161,7 +161,7 @@ body {
 
 /* ====== Tag Pills ======== */
 
-.tag {
+.tag:not(.token) {
   background-color: var(--tagsbgcolor);
   border: none;
   color: white !important;
