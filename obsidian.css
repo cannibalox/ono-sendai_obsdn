@@ -1,6 +1,10 @@
-/* Ono-Sendai for Obsidian - v202009250100 v0.9.00 by _ph / www.hpx1.com */
+/* Ono-Sendai for Obsidian - v20220601 v0.9.01 by _ph / www.hpx1.com */
 /* consider leaving credits or putting a thank you if you use this theme as a starter kit */
-/* free to use, share and modify -*/
+/* free to use, share and modify - PRs and updates are welcome */
+
+:root {
+--default-font: Cairo;
+}
 
 body {
   font-size: 13px;
