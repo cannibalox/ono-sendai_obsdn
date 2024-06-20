@@ -1,8 +1,14 @@
 # Ono-Sendai_obsdn
 
+# !! note: this theme is currently unmaintained, and will not work properly in newer obsidian versions. !! 
+
 ### description
 
 a terminal retro-look for [[Obsidian]]
+
+
+https://github.com/cannibalox/ono-sendai_obsdn/assets/4605693/28669765-4f7f-454d-856b-b34e303f05b3
+
 
 ![](https://raw.githubusercontent.com/cannibalox/ono-sendai_obsdn/master/ono-sendai_obsdn_00.png)
 ![](https://raw.githubusercontent.com/cannibalox/ono-sendai_obsdn/master/ono-sendai_obsdn_001.png)
